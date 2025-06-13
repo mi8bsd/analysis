@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AlpineJS Quote Generator</title>
+    <script defer src="https://unpkg.com/alpinejs@3.10.5/dist/cdn.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="card" x-data="{content: '', author: '', 
+        refresh(){
+            window.location.reload();
+        }
+            }" 
+            x-init="fetch('https://api.quotable.io/random')
+                .then(response => response.json())
+                .then(data => {
+                    content = data.content
+                    author = data.author
+                })
+        ">
+        <h2>Quote for the day</h2>
+        <div class="quote">
+            <blockquote x-text="content"></blockquote>
+            <p class="author" x-text="'--- ' + author"></p>
+        </div>
+        <button @click="refresh">New Quote</button>
+    </div>
+
+
+
+
+
+
+
+</body>
+
+</html>
