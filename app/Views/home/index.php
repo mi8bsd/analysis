@@ -1,1 +1,0 @@
-<h2>Main page of Framework</h2>
