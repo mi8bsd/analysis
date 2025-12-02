@@ -1,0 +1,61 @@
+---
+const data = [
+    {id: "1", Name: "Logan", Img: "https://i.pinimg.com/564x/c7/59/55/c759555dcc3d4d3d4d7cae4ae4027d1c.jpg", History: "Wolverine, also known as Logan, is a popular Marvel Comics character. As a mutant with regenerative healing abilities and retractable adamantium claws, he embodies the feral and relentless hero. With a complex and mysterious past, Wolverine has been a member of the X-Men and has embarked on numerous adventures. Known for his gruff personality and enduring resilience, Wolverine's age is often depicted as over a century old.", SuperHero: "Wolverine", Age: "Unknow" },
+    {id: "2", Name: "Dr. Charles Xavier", Img: "https://i.pinimg.com/564x/d3/72/f2/d372f23067088d0d3de942d2d83178f1.jpg", History: "Dr. Xavier, or Charles Xavier, is a prominent character in the Marvel Universe. As the founder of the X-Men, he is a powerful mutant with telepathic abilities and known as Professor X. With a tragic backstory, Xavier dedicates his life to promoting peace and understanding between mutants and humans. He is often portrayed as being in his 50s or 60s.", SuperHero: "Professor X", Age: 50 },
+    {id: "3", Name: "Wade Wilson", Img: "https://i.pinimg.com/564x/13/c6/46/13c6468459cd4203480d31284bb1b825.jpg", History: "Wade Wilson, commonly known as Deadpool, is a Marvel antihero with a sarcastic and unpredictable nature. His regenerative healing powers make him nearly indestructible. With a checkered past as a mercenary, Deadpool uses his unique skills and dark humor to fight both heroes and villains. His age varies in the comics, but he is typically depicted as being in his 30s or 40s.",  SuperHero: "Deadpool", Age: 30 },
+    {id: "4", Name: "Ororo Munroe", Img: "https://i.pinimg.com/564x/a3/fa/54/a3fa54600c9056318e6bd02fc0b5b9f9.jpg", History: "Storm, also known as Ororo Munroe, is a powerful mutant from the X-Men universe. Born in Kenya, her parents died in an accident, and she grew up in Cairo, where she discovered her ability to control the weather. As a member of the X-Men, she has fought tirelessly for peaceful coexistence between humans and mutants. With over 50 years of age, Storm is a brave and compassionate leader who uses her powers to protect the innocent and confront the challenges faced by the mutant world.",  SuperHero: "Storm", Age: 50 },
+    {id: "5", Name: "Dr. Henry McCoy", Img: "https://i.pinimg.com/564x/59/0b/70/590b702032d410f82a0869bfab828520.jpg", History: "Beast, also known as Dr. Henry Hank McCoy, is a brilliant mutant scientist and member of the X-Men. Gifted with enhanced agility, strength, and intellect, Beast's physical appearance has transformed into a blue, furry creature. With a doctorate in genetics, he contributes invaluable scientific knowledge to the team. At around 35 years old, Beast remains a key figure in advancing mutant-human relations and fighting for equality and understanding.",  SuperHero: "Beast", Age: 35 },
+    {id: "6", Name: "Scott Summers", Img: "https://i.pinimg.com/564x/1b/c6/c0/1bc6c018f18f3ac8ab2cbe829c19d73c.jpg", History: "Cyclops, whose full name is Scott Summers, is a prominent mutant character in the X-Men universe. He possesses the ability to emit powerful optic blasts from his eyes, which he must control with a specialized visor. Cyclops has been a dedicated leader of the X-Men, known for his strategic prowess and unwavering commitment to protecting mutantkind. With a current age of around 40 years, Cyclops continues to be a central figure in the ongoing battle for mutant rights and the preservation of peace.",  SuperHero: "Cyclops", Age: 40 },
+    {id: "7", Name: "Anna Marie", Img: "https://i.pinimg.com/564x/f7/74/8d/f7748d8f9876c7ae1e0c86ab98ddc96c.jpg", History: "Rogue, whose full name is Anna Marie, is a complex mutant character in the X-Men universe. Gifted with the ability to absorb the powers and memories of others through touch, Rogue struggled with her powers, leading to her isolation. Over time, she found her place as a member of the X-Men, using her powers for good. Rogue's age varies depending on the iteration, but she is typically portrayed in her late 20s to early 30s.",  SuperHero: "Rogue", Age: 20 },
+    {id: "8", Name: "Remy Etienne LeBeau", Img: "https://i.pinimg.com/564x/05/82/89/058289de2b3d619ecf156afa3d1922df.jpg", History: "Gambit, whose full name is Remy Etienne LeBeau, is a charismatic mutant character in the X-Men universe. Hailing from New Orleans, he possesses the ability to charge objects with kinetic energy, turning them into explosive projectiles. With a troubled past as a thief, Gambit eventually found redemption as a member of the X-Men. His age varies, but he is typically depicted in his late 20s to early 30s.",  SuperHero: "Gambit", Age: 20 },
+    {id: "9", Name: "Piotr Nikolaievitch Rasputin", Img: "https://i.pinimg.com/564x/b2/9b/38/b29b38bb522ad07df943ce801b016c65.jpg", History: "Colossus, whose full name is Piotr Nikolaievitch Rasputin, is a fictional character from the X-Men comics. Born in the Soviet Union, he possesses the mutant ability to transform his body into organic steel. Known for his strong sense of duty and superhuman strength, Colossus has been a valuable member of the X-Men for over 40 years.",  SuperHero: "Colossus", Age: 40 },
+    {id: "10", Name: "Kurt Wagner", Img: "https://i.pinimg.com/564x/32/a1/4a/32a14ad83521e55525f26b22e7892cf6.jpg",History: "Nightcrawler, whose full name is Kurt Wagner, is a valuable member of the X-Men. Born with a demonic appearance and extraordinary acrobatic abilities, he has fought against discrimination. His story is marked by the search for redemption and acceptance of his unique appearance. Nightcrawler is approximately 35 years old." , SuperHero: "Nightcrawler", Age: 35 },
+    {id: "11", Name: "Jean Grey", Img: "https://i.pinimg.com/736x/70/80/e7/7080e7fa5de9cf59b3c60da09f1f44b2.jpg", History: "Phoenix, whose full name is Jean Grey, is an iconic character of the X-Men. Endowed with telepathic and telekinetic powers, her life changed after being possessed by the cosmic entity Phoenix. Jean Grey has gone through various stages, facing internal struggles and external challenges. Throughout her history, she has experienced ups and downs, rising from the ashes. Jean Grey is around 30 years old.",  SuperHero: "Phoenix", Age: 30 },
+    {id: "12", Name: "Elizabeth Braddock", Img: "https://i.pinimg.com/564x/52/6c/9d/526c9d53d62bebf2b65263e54fc37667.jpg", History: "Psylocke, whose full name is Elizabeth Braddock, is a fascinating member of the X-Men. Originally a British telepath, she later acquired enhanced fighting skills and a psychic blade. Psylocke's story involves a complex journey of body-switching and personal growth. Elizabeth Braddock is approximately 35 years old.",  SuperHero: "Psylocke", Age: 35 },
+]
+/*
+{data.map(Data => {
+    return (
+    <div class="">
+      <div class="container overflow-hidden text-center">
+  <div class="row">
+    <div class="col">
+      <div class="p-3">
+        <div class="card" style="width: 18rem;">
+        <div class="card-body text-center">
+              <img src={Data.Img} class="img-fluid"/>
+          <h5 class="card-title m-2">{Data.Name}</h5>
+            <h5 class="card-title">{Data.SuperHero}</h5>
+          <h6 class="card-subtitle mb-2 text-body-secondary">Age: {Data.Age}</h6>
+          <p class="card-text">{Data.History}</p>
+        </div>
+        </div>
+        </div>
+    </div>
+  </div>
+</div>
+    </div>
+    )
+})}
+*/
+
+--- 
+<div class="container bg-light">
+  <div class="row">
+{data.map(Data => {
+  return (
+  <div class="col-md-4 mb-3 text-center">
+        <div class="card">
+          <img src={Data.Img} class="card-img-top" alt={Data.Name} />
+          <div class="card-body">
+            <h5 class="card-title">{Data.Name}</h5>
+            <h5 class="card-title">{Data.SuperHero}</h5>
+            <h6 class="card-subtitle mb-2 text-muted">Age: {Data.Age}</h6>
+            <p class="card-text">{Data.History}</p>
+          </div>
+        </div>
+      </div>
+  )
+})}
+</div>
+</div>
